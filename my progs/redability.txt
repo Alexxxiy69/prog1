@@ -1,0 +1,17 @@
+import 'dart:math';
+
+void main() {
+  String anyName = "As the average number of letters and words per sentence increases, the Coleman-Liau index gives the text a higher reading level. If you were to take this paragraph, for instance, which has longer words and sentences than either of the prior two examples, the formula would give the text an twelfth-grade reading level.";
+  int words = ' '.allMatches(anyName).length + 1;
+  int sentences = '.'.allMatches(anyName).length + '!'.allMatches(anyName).length + '?'.allMatches(anyName).length;
+  int letters = anyName.length - words - sentences - 1;
+  double L100 = 100 / words * letters;
+  double S100 = 100 / words * sentences;
+  int grade = (0.0588 * L100 - 0.296 * S100 - 15.8).round();
+  print('letters= $letters');
+  print('words= $words');
+  print('L100= $L100');
+  print('sentences= $sentences');
+  print('S100= $S100');
+  print('grade= $grade');
+}

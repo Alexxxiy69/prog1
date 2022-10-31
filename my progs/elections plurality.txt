@@ -1,0 +1,25 @@
+import "dart:io";
+
+void main() {
+  Map condidates = {'Frank': 0, 'Boris': 0, 'Nicolas': 0, 'Alex': 0};
+  String votr = '';
+  while (votr != 'end') {
+    print('vote for ${condidates.keys.toList()}');
+    votr = stdin.readLineSync()!;
+    if (condidates.containsKey(votr)) {
+      condidates[votr] += 1;
+    }
+    else {
+      print('no such condidate in list, please write again');
+    }
+  }
+  int thevalue = 0;
+  String thekey = '';
+  condidates.forEach((k,v) {
+    if (v > thevalue) {
+      thevalue = v;
+      thekey = k;
+    }
+  });
+  print ('the winner is $thekey');
+}

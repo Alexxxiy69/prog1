@@ -1,0 +1,6 @@
+void main(List<String> arguments) {
+  List<int> myL = [for (int i = 0; i < 100; i++) i];
+  List<int> newL = [for (int x in myL) x~/5*5];
+  List a = newL.toSet().toList();
+  print(a);
+}

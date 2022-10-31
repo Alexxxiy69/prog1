@@ -1,0 +1,24 @@
+import "dart:io";
+
+void main() {
+  int i = 0;
+  String cord = '';
+  String player = '';
+  String field = '''1 2 3
+4 5 6
+7 8 9''';
+  print(field);
+  while(i < 9) {
+    if(i.isEven) {
+      player = 'X'; }
+    else {
+      player = 'O'; }
+    print("where to place $player:");
+    cord = stdin.readLineSync()!;
+    field = field.replaceAll(cord, player);
+    print(field);
+    if ((field[0] == 'X') & (field[2] == 'X') & (field[4] == 'X')) {
+      i = 9; }
+    i++;
+  }
+}

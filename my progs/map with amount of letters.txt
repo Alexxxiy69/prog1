@@ -1,0 +1,12 @@
+void main() {
+  String text = '''Pay according to the payment details shown below. If you have any questions, ask the seller in the chat.
+  When you have paid, press the 'I have paid' button. This will prevent the seller from being able to cancel the trade. Don't press this button unless you have actually paid.
+  Network transaction fees associated with settling the trade will be deducted from the trade amount, meaning you'll receive slightly less than the amount shown.''';
+  var nl = Map<String, int>();
+  String letr = '';
+  for (int i = 97; i < 122; i++) {
+    letr = String.fromCharCode(i);
+    nl[letr] = letr.allMatches(text).length;
+  }
+  print(nl);
+}

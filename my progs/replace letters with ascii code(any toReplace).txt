@@ -1,0 +1,13 @@
+import 'dart:math';
+
+void main() {   
+ final String s1 = 'kdsdjvhoehvaeo gihttoaeih pwors jhp5j ptdoj ptdokjteopds kjtp';
+ final String toReplace = 'ds';
+ String code = '';
+ for(int i = 0; i < toReplace.length; i++) {
+   code = code + toReplace.codeUnitAt(i).toString();
+ }
+ String s2 = '';
+ s2 = s1.replaceAll(toReplace, code);
+ print (s2);
+}

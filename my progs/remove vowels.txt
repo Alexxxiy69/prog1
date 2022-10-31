@@ -1,0 +1,16 @@
+void main() {
+  String text = 'Sample text';
+  text = text.replaceAll('a', '');
+  text = text.replaceAll('e', '');
+  text = text.replaceAll('i', '');
+  text = text.replaceAll('o', '');
+  text = text.replaceAll('u', '');
+  text = text.replaceAll('y', '');
+  text = text.replaceAll('A', '');
+  text = text.replaceAll('E', '');
+  text = text.replaceAll('I', '');
+  text = text.replaceAll('O', '');
+  text = text.replaceAll('U', '');
+  text = text.replaceAll('Y', '');
+  print(text);
+}
